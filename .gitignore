@@ -161,3 +161,4 @@ cython_debug/
 # Project
 spider/downloads/full/
 file.jl
+*.pkl

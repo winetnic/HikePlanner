@@ -84,12 +84,30 @@ def sac(downhill, uphill, distance):
     return (uphill/400.0 + distance/4.0)*3600
 
 print("*** DEMO ***")
-demoinput = [[300,700,10000,1200]]
+downhill = 300
+uphill = 700
+length = 10000
+max_elevation = 1200
+print("Downhill: " + str(downhill))
+print("Uphill: " + str(uphill))
+print("Length: " + str(length))
+demoinput = [[downhill,uphill,length,max_elevation]]
 demodf = pd.DataFrame(columns=['downhill', 'uphill', 'length_3d', 'max_elevation'], data=demoinput)
 demooutput = gbr.predict(demodf)
 time = demooutput[0]
 
 import datetime
-print("DIN: " + str(datetime.timedelta(seconds=din33466(700, 300, 10))))
-print("SAC: " + str(datetime.timedelta(seconds=sac(700, 300, 10))))
+print("DIN: " + str(datetime.timedelta(seconds=din33466(uphill, downhill, length/1000))))
+print("SAC: " + str(datetime.timedelta(seconds=sac(uphill, downhill, length/1000))))
 print("Our Model: " + str(datetime.timedelta(seconds=time)))
+
+
+# Save To Disk
+import pickle
+# save the classifier
+with open('GradientBoostingRegressor.pkl', 'wb') as fid:
+    pickle.dump(gbr, fid)    
+
+# load it again
+with open('GradientBoostingRegressor.pkl', 'rb') as fid:
+    gbr_loaded = pickle.load(fid)
