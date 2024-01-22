@@ -15,3 +15,9 @@ similar dataset https://www.kaggle.com/datasets/roccoli/gpx-hike-tracks
 
 * Personalized Model
     * For a specific Hikr user
+
+## Deployment
+
+* MongoDB on Docker or Online?
+* GitHub Action welche Scrapy ausführt und Daten in MongoDB lädt
+    * z.B. 100 weitere "neue" Daten eines bestimmten Benutzers
