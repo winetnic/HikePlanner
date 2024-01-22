@@ -52,6 +52,7 @@ x = df.reset_index()[['downhill', 'uphill', 'length_3d', 'max_elevation']]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20, random_state=42)
 
+# Baseline Linear Regression
 lr = LinearRegression()
 lr.fit(x_train, y_train)
 
@@ -62,3 +63,16 @@ mse = mean_squared_error(y_test, y_pred_lr)
 # Mean Squared Error / R2
 print("r2:\t{}\nMSE: \t{}".format(r2, mse))
 
+# GradientBoostingRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+from sklearn.model_selection import train_test_split
+
+gbr = GradientBoostingRegressor(n_estimators=50, random_state=9000)
+gbr.fit(x_train, y_train)
+y_pred_gbr = gbr.predict(x_test)
+r2 = r2_score(y_test, y_pred_gbr)
+mse = mean_squared_error(y_test, y_pred_gbr)
+
+print("r2:\t{}\nMSE: \t{}".format(r2, mse))
+
+print(x_test)
