@@ -1,0 +1,60 @@
+/filter.php?skip=101600&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post70.html> (referer: https://www.hikr.org/filter.php?skip=101600&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630> (referer: https://www.hikr.org/filter.php?skip=101600&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post33.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post82.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post83.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post81.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post25.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post78.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post32.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post27.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post34.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post28.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post30.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post77.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post29.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post26.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post80.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post46.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post79.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post47.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post31.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post24.html> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:12 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/filter.php?skip=101640&act=filter&a=ped&ai=100&aa=630> (referer: https://www.hikr.org/filter.php?skip=101620&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post21.html> (referer: https://www.hikr.org/filter.php?skip=101640&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post23.html> (referer: https://www.hikr.org/filter.php?skip=101640&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.hikr.org/tour/post22.html> (referer: https://www.hikr.org/filter.php?skip=101640&act=filter&a=ped&ai=100&aa=630)
+2024-01-11 17:19:13 [scrapy.core.engine] INFO: Closing spider (finished)
+2024-01-11 17:19:13 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 40114855,
+ 'downloader/request_count': 133765,
+ 'downloader/request_method_count/GET': 133765,
+ 'downloader/response_bytes': 9081658526,
+ 'downloader/response_count': 133765,
+ 'downloader/response_status_count/200': 133762,
+ 'downloader/response_status_count/301': 2,
+ 'downloader/response_status_count/404': 1,
+ 'dupefilter/filtered': 97483,
+ 'elapsed_time_seconds': 6517.005607,
+ 'file_count': 27036,
+ 'file_status_count/downloaded': 27036,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2024, 1, 11, 16, 19, 13, 443126, tzinfo=datetime.timezone.utc),
+ 'httpcompression/response_bytes': 6390738762,
+ 'httpcompression/response_count': 106726,
+ 'item_scraped_count': 27036,
+ 'log_count/DEBUG': 187841,
+ 'log_count/INFO': 118,
+ 'request_depth_max': 5083,
+ 'response_received_count': 133763,
+ 'robotstxt/request_count': 2,
+ 'robotstxt/response_count': 2,
+ 'robotstxt/response_status_count/200': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 106726,
+ 'scheduler/dequeued/memory': 106726,
+ 'scheduler/enqueued': 106726,
+ 'scheduler/enqueued/memory': 106726,
+ 'start_time': datetime.datetime(2024, 1, 11, 14, 30, 36, 437519, tzinfo=datetime.timezone.utc)}
+2024-01-11 17:19:13 [scrapy.core.engine] INFO: Spider closed (finished)
