@@ -1,3 +1,6 @@
+# crawl gpx spider, limit to 10 and store output in json line format file
+# scrapy crawl gpx -s CLOSESPIDER_PAGECOUNT=10 -o file.jl
+
 import scrapy
 
 class GpxSpider(scrapy.Spider):
