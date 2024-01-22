@@ -40,7 +40,6 @@ print(corr)
 sn.heatmap(corr, annot=True)
 # plt.show()
 
-
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer
@@ -75,4 +74,22 @@ mse = mean_squared_error(y_test, y_pred_gbr)
 
 print("r2:\t{}\nMSE: \t{}".format(r2, mse))
 
-print(x_test)
+# distanz: m, time: sec (?)
+def din33466(downhill, uphill, distance):
+    vertical = downhill / 500.0 + uphill / 300.0
+    horizontal = distance / 4.0
+    return (min(vertical, horizontal) / 2 + max(vertical, horizontal))*3600
+
+def sac(downhill, uphill, distance):
+    return (uphill/400.0 + distance/4.0)*3600
+
+print("*** DEMO ***")
+demoinput = [[300,700,10000,1200]]
+demodf = pd.DataFrame(columns=['downhill', 'uphill', 'length_3d', 'max_elevation'], data=demoinput)
+demooutput = gbr.predict(demodf)
+time = demooutput[0]
+
+import datetime
+print("DIN: " + str(datetime.timedelta(seconds=din33466(700, 300, 10))))
+print("SAC: " + str(datetime.timedelta(seconds=sac(700, 300, 10))))
+print("Our Model: " + str(datetime.timedelta(seconds=time)))
