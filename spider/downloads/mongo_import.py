@@ -1,3 +1,7 @@
+# new terminal
+# cd spider/downloads
+# python .\mongo_import.py -c tracks -i ../file.jl
+
 import argparse
 import json
 import os
@@ -25,7 +29,8 @@ def to_document(base_dir, item):
             "max_speed": gpx.get_moving_data().max_speed,                        
             "length_2d": gpx.length_2d(),                     
             "length_3d": gpx.length_3d(),
-            "moving_time": gpx.get_moving_data().moving_time
+            "moving_time": gpx.get_moving_data().moving_time,
+            "difficulty": item["difficulty"]
         }
         return doc
             
