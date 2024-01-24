@@ -22,7 +22,7 @@ jobs:
           
       - name: execute py script 
         working-directory: ./spider
-        run: scrapy crawl gpx -s CLOSESPIDER_PAGECOUNT=10 -o file.jl
+        run: scrapy crawl gpx -s CLOSESPIDER_PAGECOUNT=50 -o file.jl
 
       - name: upload to mongodb
         working-directory: spider/downloads
