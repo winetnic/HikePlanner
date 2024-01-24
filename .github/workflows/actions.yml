@@ -25,4 +25,4 @@ jobs:
 
       - name: upload to mongodb
         working-directory: spider/downloads
-        run: python mongo_import.py -u ${{secrets.MONGODB_URI}} -c tracks -i ../file.jl
+        run: python ./mongo_import.py -u ${{secrets.MONGODB_URI}} -c tracks -i ../file.jl
