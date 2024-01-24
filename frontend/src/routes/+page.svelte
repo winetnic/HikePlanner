@@ -1,4 +1,10 @@
 <script>
+    import {dev} from '$app/environment';
+    let url = location.protocol + '//' + location.host;
+    if (dev) {
+        url = "http://localhost:5000";
+    }
+
     let count = 0;
 
     function increment() {
@@ -13,7 +19,7 @@
 
     async function predict() {
         let result = await fetch(
-            "http://localhost:5000/api/predict?" +
+            url + "/api/predict?" +
                 new URLSearchParams({
                     downhill: downhill,
                     uphill: uphill,
