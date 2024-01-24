@@ -36,6 +36,7 @@ if 'AZURE_STORAGE_CONNECTION_STRING' in os.environ:
 
     # Download the blob to a local file
     # Add 'DOWNLOAD' before the .txt extension so you can see both files in the data directory
+    Path("../model").mkdir(parents=True, exist_ok=True)
     download_file_path = os.path.join("../model", "GradientBoostingRegressor.pkl")
     print("\nDownloading blob to \n\t" + download_file_path)
 
