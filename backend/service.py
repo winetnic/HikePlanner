@@ -13,8 +13,11 @@ if 'AZURE_STORAGE_CONNECTION_STRING' in os.environ:
     azureStorageConnectionString = os.environ['AZURE_STORAGE_CONNECTION_STRING']
     blob_service_client = BlobServiceClient.from_connection_string(azureStorageConnectionString)
 
+    print("try to get containers")
     containers = blob_service_client.list_containers(include_metadata=True)
+    print("list containers")
     for container in containers:
+        print(container)
         existingContainerName = container['name']
         print(existingContainerName, container['metadata'])
         if existingContainerName.startswith("hikeplanner-model"):
@@ -26,14 +29,14 @@ if 'AZURE_STORAGE_CONNECTION_STRING' in os.environ:
                 if (newSuffix > suffix):
                     suffix = newSuffix
 
-    container_client = blob_service_client.get_container_client("hikeplanner-model-" + suffix)
+    container_client = blob_service_client.get_container_client("hikeplanner-model-" + str(suffix))
     blob_list = container_client.list_blobs()
     for blob in blob_list:
         print("\t" + blob.name)
 
     # Download the blob to a local file
     # Add 'DOWNLOAD' before the .txt extension so you can see both files in the data directory
-    download_file_path = os.path.join(".", "GradientBoostingRegressor.pkl")
+    download_file_path = os.path.join("../model", "GradientBoostingRegressor.pkl")
     print("\nDownloading blob to \n\t" + download_file_path)
 
     with open(file=download_file_path, mode="wb") as download_file:
