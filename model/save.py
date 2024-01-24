@@ -23,18 +23,22 @@ try:
 
     exists = False
     containers = blob_service_client.list_containers(include_metadata=True)
+    suffix = 0
     for container in containers:
         existingContainerName = container['name']
         print(existingContainerName, container['metadata'])
         if existingContainerName.startswith("hikeplanner-model"):
             parts = existingContainerName.split("-")
             print(parts)
-            suffix = 1
             if (len(parts) == 3):
-                suffix = int(parts[-1])
-                suffix += 1
- 
+                newSuffix = int(parts[-1])
+                if (newSuffix > suffix):
+                    suffix = newSuffix
+
+    suffix += 1
     container_name = str("hikeplanner-model-" + str(suffix))
+    print("new container name: ")
+    print(container_name)
 
     for container in containers:            
         print("\t" + container['name'])
@@ -60,3 +64,4 @@ try:
 except Exception as ex:
     print('Exception:')
     print(ex)
+    exit(1)
