@@ -20,4 +20,4 @@ similar dataset https://www.kaggle.com/datasets/roccoli/gpx-hike-tracks
 
 * MongoDB on Docker or Online?
 * GitHub Action welche Scrapy ausführt und Daten in MongoDB lädt
-    * z.B. 100 weitere "neue" Daten eines bestimmten Benutzers
+    * z.B. 100 weitere "neue" Daten eines bestimmten Benutzers 
