@@ -14,9 +14,9 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Create Model')
 parser.add_argument('-u', '--uri', required=True, help="mongodb uri with username/password")
-args = vars(parser.parse_args())
+args = parser.parse_args()
 
-mongo_uri = "mongodb://root:example@localhost:27017"
+mongo_uri = args.uri
 mongo_db = "tracks"
 mongo_collection = "tracks"
 
