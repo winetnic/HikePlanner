@@ -41,7 +41,7 @@ def to_document(base_dir, item):
 
 class JsonLinesImporter:
 
-    def __init__(self, file, batch_size=30, db='tracks', collection='tracks'):
+    def __init__(self, file, mongo_uri, batch_size=30, db='tracks', collection='tracks'):
         self.file = file
         self.base_dir = os.path.dirname(file)
         self.batch_size = batch_size
