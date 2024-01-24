@@ -21,6 +21,8 @@ jobs:
           
       - name: execute py script 
         working-directory: ./spider
-        env:
-          SOME_SECRET: ${{ secrets.SOME_SECRET }}
         run: scrapy crawl gpx -s CLOSESPIDER_PAGECOUNT=10 -o file.jl
+
+      - name: upload to mongodb
+        working-directory: spider/downloads
+        run: python .\mongo_import.py -u ${{secrets.MONGODB_URI}} -c tracks -i ../file.jl

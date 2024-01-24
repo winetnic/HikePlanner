@@ -41,7 +41,7 @@ def to_document(base_dir, item):
 
 class JsonLinesImporter:
 
-    def __init__(self, file, batch_size=30, mongo_uri='mongodb://root:example@localhost:27017', db='tracks', collection='tracks'):
+    def __init__(self, file, batch_size=30, db='tracks', collection='tracks'):
         self.file = file
         self.base_dir = os.path.dirname(file)
         self.batch_size = batch_size
@@ -77,9 +77,9 @@ class JsonLinesImporter:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('-u', '--uri', required=True, help="mongodb uri with username/password")
     parser.add_argument('-i', '--input', required=True, help="input file in JSON Lines format")
-    parser.add_argument('-c', '--collection', required=True,
-                        help="name of the mongodb collection where the tracks should be stored")
+    parser.add_argument('-c', '--collection', required=True, help="name of the mongodb collection where the tracks should be stored")
     args = parser.parse_args()
-    importer = JsonLinesImporter(args.input, collection=args.collection)
+    importer = JsonLinesImporter(args.input, collection=args.collection, mongo_uri=args.uri)
     importer.save_to_mongodb()
