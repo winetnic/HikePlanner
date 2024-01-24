@@ -26,11 +26,17 @@ import datetime
 print("Our Model: " + str(datetime.timedelta(seconds=time)))
 
 
-from flask import Flask, request
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app)
 
 @app.route("/")
+def home():
+    return "backend"
+
+@app.route("/api/predict")
 def hello_world():
     downhill = request.args.get('downhill', default = 0, type = int)
     uphill = request.args.get('uphill', default = 0, type = int)
@@ -41,4 +47,4 @@ def hello_world():
     demooutput = gbr.predict(demodf)
     time = demooutput[0]
 
-    return str(datetime.timedelta(seconds=time))
+    return jsonify({'time': str(datetime.timedelta(seconds=time))})
