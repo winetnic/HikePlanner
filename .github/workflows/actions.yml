@@ -31,3 +31,7 @@ jobs:
       - name: build model
         working-directory: model
         run: python ./model.py -u "${{secrets.MONGODB_URI}}"
+
+      - name: upload model
+        working-directory: model
+        run: python ./save.py -c "${{secrets.AZURE_STORAGE_CONNECTION_STRING}}"
