@@ -1,4 +1,4 @@
-# flask --debug --app service run
+# python -m flask --debug --app service run (works also in PowerShell)
 
 import os
 import pickle

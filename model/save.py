@@ -1,3 +1,6 @@
+# cd model
+# python save.py -c '***AZURE_STORAGE_CONNECTION_STRING***'
+
 import os, uuid
 from azure.identity import DefaultAzureCredential
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
