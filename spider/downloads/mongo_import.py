@@ -1,6 +1,6 @@
 # new terminal
 # cd spider/downloads
-# python .\mongo_import.py -c tracks -i ../file.jl
+# python .\mongo_import.py -c tracks -i ../file.jl -u 'MONGO_DB_CONNECTION_STRING'
 
 import argparse
 import json

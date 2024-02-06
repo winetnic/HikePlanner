@@ -1,16 +1,13 @@
 # new terminal
 # cd model
-# python model.py
-
-import json
-from pymongo import MongoClient
-import gpxpy
-import pandas as pd
-
-import seaborn as sn
-import matplotlib.pyplot as plt
+# python model.py -u 'MONGO_DB_CONNECTION_STRING'
 
 import argparse
+
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sn
+from pymongo import MongoClient
 
 parser = argparse.ArgumentParser(description='Create Model')
 parser.add_argument('-u', '--uri', required=True, help="mongodb uri with username/password")
@@ -47,10 +44,9 @@ sn.heatmap(corr, annot=True)
 # plt.show()
 
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Normalizer
-from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
 
 y = df.reset_index()['moving_time']
 x = df.reset_index()[['downhill', 'uphill', 'length_3d', 'max_elevation']]
@@ -80,14 +76,18 @@ mse = mean_squared_error(y_test, y_pred_gbr)
 
 print("r2:\t{}\nMSE: \t{}".format(r2, mse))
 
-# distanz: m, time: sec (?)
-def din33466(downhill, uphill, distance):
+def din33466(uphill, downhill, distance):
+    km = distance / 1000.0
+    print(km)
     vertical = downhill / 500.0 + uphill / 300.0
-    horizontal = distance / 4.0
-    return (min(vertical, horizontal) / 2 + max(vertical, horizontal))*3600
+    print(vertical)
+    horizontal = km / 4.0
+    print(horizontal)
+    return 3600.0 * (min(vertical, horizontal) / 2 + max(vertical, horizontal))
 
-def sac(downhill, uphill, distance):
-    return (uphill/400.0 + distance/4.0)*3600
+def sac(uphill, distance):
+    km = distance / 1000.0
+    return 3600.0 * (uphill/400.0 + km /4.0)
 
 print("*** DEMO ***")
 downhill = 300
@@ -103,13 +103,15 @@ demooutput = gbr.predict(demodf)
 time = demooutput[0]
 
 import datetime
-print("DIN: " + str(datetime.timedelta(seconds=din33466(uphill, downhill, length/1000))))
-print("SAC: " + str(datetime.timedelta(seconds=sac(uphill, downhill, length/1000))))
+
+print("DIN: " + str(datetime.timedelta(seconds=din33466(uphill, downhill, length))))
+print("SAC: " + str(datetime.timedelta(seconds=sac(uphill, length))))
 print("Our Model: " + str(datetime.timedelta(seconds=time)))
 
 
 # Save To Disk
 import pickle
+
 # save the classifier
 with open('GradientBoostingRegressor.pkl', 'wb') as fid:
     pickle.dump(gbr, fid)    
