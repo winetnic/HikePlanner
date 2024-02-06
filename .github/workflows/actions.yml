@@ -2,6 +2,7 @@ name: run gethikrdata.py
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   build:
