@@ -54,14 +54,17 @@ with open(file_path, 'rb') as fid:
 
 print("*** Sample calculation with model ***")
 def din33466(uphill, downhill, distance):
-    km = distance / 1000
+    km = distance / 1000.0
+    print(km)
     vertical = downhill / 500.0 + uphill / 300.0
+    print(vertical)
     horizontal = km / 4.0
-    return 3600 * (min(vertical, horizontal) / 2 + max(vertical, horizontal))
+    print(horizontal)
+    return 3600.0 * (min(vertical, horizontal) / 2 + max(vertical, horizontal))
 
 def sac(uphill, downhill, distance):
-    km = distance / 1000
-    return 3600 * (uphill/400.0 + km /4.0)
+    km = distance / 1000.0
+    return 3600.0 * (uphill/400.0 + km /4.0)
 
 downhill = 300
 uphill = 700
