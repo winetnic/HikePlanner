@@ -1,4 +1,4 @@
-name: run gethikrdata.py
+name: Scrape Data, build and upload Model
 
 on:
   push:
@@ -21,11 +21,11 @@ jobs:
       - name: install python packages
         run: pip install -r requirements.txt
           
-      - name: execute py script 
+      - name: scrape hikr data 
         working-directory: ./spider
         run: scrapy crawl gpx -s CLOSESPIDER_PAGECOUNT=50 -o file.jl
 
-      - name: upload to mongodb
+      - name: upload data to mongodb
         working-directory: spider/downloads
         run: python ./mongo_import.py -c tracks -i ../file.jl -u "${{secrets.MONGODB_URI}}"
 
