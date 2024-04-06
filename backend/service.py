@@ -100,6 +100,7 @@ def hello_world():
     demodf = pd.DataFrame(columns=['downhill', 'uphill', 'length_3d', 'max_elevation'], data=demoinput)
     demooutput = model.predict(demodf)
     time = demooutput[0]
+    
 
     return jsonify({
         'time': str(datetime.timedelta(seconds=time)),
